@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "servers": [
     {
-      "url": "https://tweeter.dev.narando.com/"
+      "url": "https://tweeter.dev.trackcode.de/"
     }
   ],
   "info": {
@@ -77,113 +77,20 @@
           }
         }
       }
-    },
-    "/users/{id}": {
-      "get": {
-        "summary": "return detailed information for a single user",
-        "tags": ["Level 3"],
-        "responses": {
-          "200": {
-            "description": "User could be retrieved",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/User"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "User could not be found"
-          }
-        }
-      }
-    },
-    "/users/{id}/follow": {
-      "post": {
-        "summary": "follow this user",
-        "tags": ["Level 3"],
-        "responses": {
-          "201": {
-            "description": "Following was successful. Returns the users you are currently following",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "schema": "#/components/schemas/User"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "There is no logged in user"
-          },
-          "404": {
-            "description": "User could not be found"
-          }
-        }
-      },
-      "delete": {
-        "summary": "unfollow this user",
-        "tags": ["Level 3"],
-        "responses": {
-          "204": {
-            "description": "Unfollowing was successful"
-          },
-          "403": {
-            "description": "There is no logged in user"
-          },
-          "404": {
-            "description": "User could not be found"
-          }
-        }
-      }
-    },
-    "/dashboard": {
-      "get": {
-        "summary": "shows tweets from the users you follow. If there is no logged in user, show most recent tweets",
-        "tags": ["Level 4"],
-        "responses": {
-          "default": {
-            "description": "Default response"
-          }
-        }
-      }
     }
   },
   "components": {
     "schemas": {
-      "User": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "name": {
-            "type": "string"
-          },
-          "username": {
-            "type": "string"
-          },
-          "tweets": {
-            "type": "array",
-            "optional": true,
-            "items": {
-              "$ref": "#/components/schemas/Tweet"
-            }
-          }
-        }
-      },
       "Tweet": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
-          "author": {
-            "$ref": "#/components/schemas/User"
-          },
           "content": {
+            "type": "string"
+          },
+          "username": {
             "type": "string"
           },
           "time": {

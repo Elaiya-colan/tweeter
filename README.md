@@ -1,4 +1,4 @@
-# Tweeter Nodejs Project
+# Tweeter Project
 
 ## Steps
 
@@ -11,7 +11,7 @@ To work on this project, fork it to your own account!
 You can find the specification in the file `api.json`, though I would recommend
 to use a UI for inspecting it: [OpenApiRenderer][1]
 
-[1]: https://temando.github.io/open-api-renderer/demo/?url=https://raw.githubusercontent.com/apricote/tweeter/master/api.json
+[1]: https://temando.github.io/open-api-renderer/demo/?url=https://raw.githubusercontent.com/trackcode-team/tweeter/master/api.json
 
 ### Sketch the Database schema
 
@@ -37,8 +37,15 @@ For storing the data you have multiple options:
 
 You may use whatever you feel most comfortable with.
 
-### Optional: Build a UI
+### Build a UI
 
-You have finished the main challenge but still want to do something? Build a
-User Interface to interact with the tweeter service. This could be a native App
-for mobile phones, or a Single Page Web App or anything else.
+Independent of the API implementation you need to create a
+User Interface to interact with the tweeter service (maybe use static content). This should be a Single Page Web App with React (we recommend to use  [`create-react-app`](https://github.com/facebook/create-react-app)).
+
+> Note the problem when implementing the API and React application in one repository. You can also create your own repository for the web application if it's easier for you.
+
+WireFrame:
+![wireframe tweeter](./wireframe.png)
+
+> The `username` could be a static variable inside the React application.
+
