@@ -1,0 +1,752 @@
+
+@font-face{
+	font-family:"Poppins-Light";
+	src:url("../fonts/Poppins-Light.ttf");
+	font-weight:normal;
+}
+@font-face{
+	font-family:"Poppins-Regular";
+	src:url("../fonts/Poppins-Regular.ttf");
+	font-weight:100;
+}
+@font-face{
+	font-family:"Poppins-SemiBold";
+	src:url("../fonts/Poppins-SemiBold.ttf");
+	font-weight:300;
+}
+@font-face{
+	font-family:"Poppins-Medium";
+	src:url("../fonts/Poppins-Medium.ttf");
+	font-weight:400;
+}
+@font-face{
+	font-family:"Poppins-Bold";
+	src:url("../fonts/Poppins-Bold.ttf");
+	font-weight:500;
+}
+@font-face{
+	font-family:"Poppins-ExtraBold";
+	src:url("../fonts/Poppins-ExtraBold.ttf");
+	font-weight:600;
+}
+body{
+margin:0 !important;
+padding:0;
+font-family:'Poppins-Regular',sans-serif !important;
+font-size:13px !important;
+background: #f8f8f8 !important;
+}
+
+.loginSection{
+	background: rgba(112,219,201,1);
+	background: -moz-linear-gradient(top, rgba(112,219,201,1) 0%, rgba(88,187,161,1) 77%, rgba(88,187,161,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(112,219,201,1)), color-stop(77%, rgba(88,187,161,1)), color-stop(100%, rgba(88,187,161,1)));
+	background: -webkit-linear-gradient(top, rgba(112,219,201,1) 0%, rgba(88,187,161,1) 77%, rgba(88,187,161,1) 100%);
+	background: -o-linear-gradient(top, rgba(112,219,201,1) 0%, rgba(88,187,161,1) 77%, rgba(88,187,161,1) 100%);
+	background: -ms-linear-gradient(top, rgba(112,219,201,1) 0%, rgba(88,187,161,1) 77%, rgba(88,187,161,1) 100%);
+	background: linear-gradient(to bottom, rgba(112,219,201,1) 0%, rgba(88,187,161,1) 77%, rgba(88,187,161,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70dbc9', endColorstr='#58bba1', GradientType=0 );
+	width:100%;
+	height:100%;
+	position: relative;
+	overflow:hidden; 
+}
+.loginSection::after{
+	content:'';	
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    background: url("../images/bannerBg.png") repeat;
+    opacity: 0.3;
+}
+.loginBg{
+	width: 100%;
+    max-width: 380px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+	justify-content: center;
+	position: relative;
+	z-index: 9;
+}
+.loginInner{
+	width: 100%;
+	background: #ffffff;
+	padding:20px;
+	border-radius:6px;
+	box-shadow:0px 12px 26px -9px #9c9c9c;
+    -webkit-box-shadow: 0px 12px 26px -9px #9c9c9c;
+    -moz-box-shadow:0px 12px 26px -9px #9c9c9c;
+}
+.logoImg{
+	width: 100px;
+    height: 70px;
+    margin: 10px auto;
+    display: block;
+}
+.logoImg img{
+	width:100%;
+	height:100%;
+	object-fit: contain;
+}
+.loginTitle{
+	text-align: center;
+    margin: 17px auto;
+    color: #757575;
+    text-transform: uppercase;
+	font-size: 16px;
+    font-family: "Poppins-Medium";
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+.form-control{
+	padding: 10px !important;
+    border: 1px solid #e4e4e4 !important;
+    font-size: 14px !important;
+}
+.form-control:focus{
+	outline:none;
+	border-color:#58bba1 !important;
+	box-shadow: 2px 2px 7px 0px #d6d6d6 !important;
+	-webkit-box-shadow: 2px 2px 7px 0px #d6d6d6 !important;
+	-moz-box-shadow: 2px 2px 7px 0px #d6d6d6 !important;
+	transition: .2s all ease-in-out;
+}
+.forget{
+	text-align: right;
+    width: 100%;
+    display: block;
+	color: #757575;
+	font-family: 'Poppins-Regular';
+	font-weight: 100;
+    text-decoration: none;
+}
+.forget:hover{
+	color:#757575;
+}
+.loginInner button{
+	width:100%;
+	background:#58bba1;
+	padding:8px;
+	color:#ffffff;
+	border:none !important;
+	border-radius: 4px;
+}
+.loginInner button:hover{
+	box-shadow: 2px 2px 7px 0px #979898;
+	-webkit-box-shadow: 2px 2px 7px 0px #979898;
+	-moz-box-shadow: 2px 2px 7px 0px #979898;
+	color:#ffffff;
+}
+
+.dashboardBg{
+	width: 100%;
+    min-height: 100%;
+
+    position: relative;
+    display: block;
+    overflow-y: auto;
+}
+.header{
+	width: 100%;
+    display: block;
+    padding:10px;
+    background: #fff;
+}
+.header .logo{
+	width: 100px;
+    height: 45px;
+    display: inline-block;
+}
+.header .logo img{
+	height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.navbar{
+	background: #58bba1;
+    box-shadow:0 3px 5px 0 rgba(58, 58, 62,.2) !important;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 0px !important;
+}
+.navbar ul{
+	list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li{
+	padding:10px;
+	display: inline-block;
+	
+}
+.navbar ul li.active{
+	background: #4bcfbf;
+}
+.navbar ul li a{
+	color: #ffffff;
+	font-size: 15px;
+	text-decoration: none;
+}
+.navbar ul li a svg{
+	width: 20px !important;
+    height: 20px;
+    margin-right: 5px;
+}
+.navbar ul li a:hover{
+	text-decoration: none;
+}
+.navbar .toggleBtn{
+	display: none;
+}
+.wrapper{width:100%;display: block;margin-top:10px;position: relative;padding: 10px;}
+.contentTitle{    width: 100%;
+    display: block;
+	padding: 10px 0px;
+	margin-bottom:15px;
+}
+.contentTitle h4{
+	color: #6b6a6add;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Poppins-Medium";
+}
+.dashCard{
+	border:none !important;
+	box-shadow: 0 1px 15px 1px rgba(196, 196, 197, 0.5);
+	border-radius:6px;
+	margin-bottom:25px;
+}
+.dashCard .card-body{
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.dashCard .card-body h2{
+	font-size: 18px;
+    color: #4a4a4add;
+    width: 150px;
+    font-weight: 100;
+    margin-bottom: 0px;
+    font-family: 'Poppins-Regular';
+}
+.dashCard .card-body h2 small{
+	font-size: 13px;
+}
+.dashCard .card-body span{
+	width: 100px;
+    height: 60px;
+    display: block;
+}
+.dashCard .card-body span img{
+	width:100%;
+	height:100%;
+	object-fit: contain;
+}
+.profileMenu{
+	list-style: none;
+	margin: 12px 0px;
+	padding:0;
+	float:right;
+}
+.profileMenu li{
+	padding:0px 10px;
+	display: inline-block; 
+}
+.profileMenu li a{
+	color:#757575;
+	font-size: 14px;
+	text-decoration: none;
+}
+.mailWrapper{
+	width:100%;
+	display: block;
+	background: #ffffff;
+	position: relative;
+}
+.mailWrapper aside{
+	width:250px;
+	background:#ffffff;
+	border:1px solid #ddd;
+	padding:10px;
+	position: absolute;
+	top: 0;
+	left:0;
+	height: 100%!important;
+    overflow: hidden;
+}
+.addCompose{
+	width:100%;display: block;position: relative;
+}
+.addCompose .composeBtn{
+	background:#58bba1;
+	color:#ffffff;
+	padding:8px 16px;
+	width:100%;
+	border: none;
+	outline:none;
+	font-size: 15px;
+	border-radius: 6px;
+}
+.mailItems{
+	width: 100%;
+    max-height: 100%;
+    margin-top: 25px;
+    overflow-y: auto;
+}
+.mailItems ul{
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+.mailItems ul li{
+	padding:10px;
+	display: block;
+	position: relative;
+}
+.mailItems ul li.active a{
+	color:#58bba1;
+}
+.mailItems ul li a{
+	color:#757575;
+	font-size: 16px;
+	text-decoration: none;
+}
+.mailItems ul li a svg{    width: 18px!important;
+    height: 18px;
+    margin-right: 5px;}
+.mailItems ul li a .incomingNotify{position: absolute;
+    top: 13px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    background: #4bcfbf;
+	border-radius: 50%;}
+.mailRightContent{
+	margin-left:250px;
+	border: 1px solid #ddd;
+	/* height: calc(100vh - 250px); */
+}
+.searchMail{display: block;}
+.searchMail a{display: none;}
+.searchInput{
+	width: 100%;
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+}
+.searchIcon{
+	position: absolute;
+    top: 15px;
+    left: 10px;
+    z-index: 9;
+    color: #8e8a8a;
+    font-size: 15px;
+}
+.searchInput .form-control{
+	border: none !important;
+    text-indent: 25px;
+}
+.searchInput .form-control:focus{
+	box-shadow: none !important;
+}
+.selectAll{
+	width:100%;
+	padding:10px;
+	border-bottom:1px solid #ddd;
+	background: #f8f8f8;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.selectChek {
+    display: inline-block;
+    position: relative;
+
+  }
+ 
+  .selectChek label {
+    margin-bottom: 0px;
+    padding: 5px 10px 5px 30px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    color: #3C454C;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 200ms ease-in;
+	overflow: hidden;
+	height:25px;
+  }
+  .selectChek label:before {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    content: '';
+    /* background-color: #5562eb; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale3d(1, 1, 1);
+            transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    z-index: -1;
+  }
+  .selectChek label:after {
+    width: 18px;
+    height: 18px;
+    content: '';
+    border: 1px solid #d9deec;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: 1px 2px;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 200ms ease-in;
+  }
+  .selectChek input:checked ~ label {
+    color: #5a5a5a;
+  }
+  .netBank input:checked ~ label:before {
+    -webkit-transform: translate(-50%, -50%) scale3d(56, 56, 1);
+            transform: translate(-50%, -50%) scale3d(56, 56, 1);
+    opacity: 1;
+  }
+  .selectChek input:checked ~ label:after {
+    background-color: #58bba1;
+    border-color: #58bba1;
+  }
+  .selectChek input {
+    width: 18px;
+    height: 18px;
+    order: 1;
+    z-index: 2;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    cursor: pointer;
+    visibility: hidden;
+  }
+  .listOfMails ul{    list-style: none;
+    padding: 0;
+	margin: 0;    width: 100%;
+    height: calc(100vh - 250px);
+    overflow-y: auto;}
+	.listOfMails ul li{
+		background: #ffffff;
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+		border-bottom: 1px solid #ddd;
+		cursor: pointer;
+	}
+	.listOfMails ul li:hover{
+		-webkit-transform: translateY(-4px);
+		transform: translateY(-4px);
+		-webkit-box-shadow: 0 3px 10px 0 #ccc;
+		box-shadow: 0 3px 10px 0 #ccc;
+		-webkit-transition: all .2s;
+		transition: all .2s;
+	}
+	.listOfMails ul li .mailHeader{
+		display: flex;
+		justify-content: space-between;
+		width: 94%;
+	}
+	.listOfMails ul li .time{
+		width: 6%;
+		display: block;
+	}
+	.listOfMails ul li .time span{
+		font-weight: 300;
+		font-family: 'Poppins-SemiBold';
+		color: #555555;
+	}
+	.mailHeaderText{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.mailHeaderText h4{
+		font-size: 17px;
+		font-family: 'Poppins-Medium';
+		margin-bottom: 5px;
+		color:#5a5a5a;
+		
+	}
+	.mailHeaderText p{
+		margin-bottom: 5px;
+		font-size: 14px;
+		color: #626262;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.mailHeaderText span{
+		width: 100%;
+		overflow: hidden!important;
+		text-overflow: ellipsis!important;
+		white-space: nowrap!important;
+		color: #626262;
+	}
+	
+	.viewSingleMail{
+		width: 100%;
+		display: block;
+		position: relative;
+	}
+	.viewSingleMail .subjectInfo{
+		width:100%;
+		border-bottom: 1px solid #ddd;
+		background: #ffffff;
+		padding:10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.trashIcon,.viewSingleMail .subjectInfo a{
+		font-size: 18px;
+		color: #737373;
+		margin-right: 5px;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	.viewSingleMail .subjectInfo h4{
+		font-size: 17px;
+		font-family: 'Poppins-Regular';
+		margin-bottom: 0px;
+		color:#5a5a5a;
+		
+	}
+	.viewSingleMail .subjectInfo ul{
+		list-style: none;
+		padding:0px;
+		width: 20%;
+		margin:0px;
+	}
+	.viewSingleMail .subjectInfo ul li{
+		display: inline-block;
+		padding:0px 5px;
+	}
+	.viewSingleMail .subjectInfo ul li a{
+		font-size: 18px;
+		color: #737373;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	.individualEmails{
+		width: 100%;
+		height: calc(100vh - 250px);
+		overflow-y: auto;
+		background: #d6d6d6;
+		padding: 10px;
+	}
+
+	.individualEmails .mailCard{
+		width:100%;
+		background: #ffffff;
+		padding: 15px;
+		display: block;
+		border-radius: 6px;
+	}
+	.arrowWithSub{
+		display: flex;
+		justify-content: Start;
+		align-items: center;
+		width: 80%;
+	}
+	.individualEmails .mailCard .mailCardTitle{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width:100%;
+		border-bottom:1px solid #ddd;
+		padding-bottom: 15px;
+	}
+	.individualEmails .mailCard .mailCardTitle .mailFormInfo{
+		width:80%;
+	}
+	.individualEmails .mailCard .mailCardTitle .mailFormInfo h5{
+		font-size: 16px;
+		font-family: 'Poppins-SemiBold';
+		margin-bottom: 4px;
+		color:#5a5a5a;
+	}
+	.individualEmails .mailCard .mailCardTitle .mailFormInfo span{
+		color:#737373;
+		font-size: 14px;
+		font-family: 'Poppins-Regular';
+		text-decoration: none;
+	}
+	.individualEmails .mailCard .mailCardTitle .mailFormInfo span .dropdown-menu.show{
+		border-radius: 6px;
+		padding: 10px !important;
+		min-width: 240px !important;
+		transform: translate3d(0px, 20px, 0px) !important;
+	}
+	.individualEmails .mailCard .mailCardTitle .mailFormInfo span .dropdown-menu.show span{
+		display: block;
+		font-size: 12px;
+	}
+	.individualEmails .mailCard .mailCardTitle .mailFormInfo span a{color:#626262;margin-left:5px;}
+	.individualEmails .mailCard .mailCardTitle .mailTime{
+		width:20%;
+		text-align: right;
+	}
+	.individualEmails .mailCard .mailCardTitle .mailTime p{
+		margin-bottom:5px; 
+	}
+	.individualEmails .mailCard .mailCardBody{
+		width:100%;
+		display: block;
+		padding: 15px;
+	}
+	.individualEmails .mailCard  .mailCardBody h6{
+		font-size: 15px;
+		font-family: 'Poppins-Regular';
+		color:#737373;
+	}
+	.individualEmails .mailCard  .mailCardBody p{
+		font-size: 14px;
+		font-family: 'Poppins-Regular';
+		color:#737373;
+		margin-bottom:10px;
+		text-align: left;
+		line-height: 20px;
+	}
+	.individualEmails .mailCard  .mailCardAttach{
+		width:100%;
+		display: block;padding:10px;
+	}
+	.individualEmails .mailCard  .mailCardAttach h4{
+		font-size: 16px;
+		font-family: 'Poppins-SemiBold';
+		color:#737373;
+		padding-bottom:10px;
+		border-bottom: 1px solid #ddd;
+	}
+	.individualEmails .mailCard  .mailCardAttach ul{
+		list-style: none;
+		padding: 0px;margin:0;
+	}
+	.individualEmails .mailCard  .mailCardAttach ul li{
+		display: inline-block;
+		padding: 10px;
+	}
+	.individualEmails .mailCard  .mailCardAttach ul li a{
+		display: flex;align-items: center;justify-content: space-between;
+		background: #58bba1;color:#ffffff;padding: 4px 10px;
+		font-size: 14px;
+		border-radius: 30px;
+		text-decoration: none;
+	}
+	.individualEmails .mailCard  .mailCardAttach ul li a span:first-child{margin-right:10px;}
+	.individualEmails .mailCard  .mailCardAttach ul li a span:last-child{font-size: 15px;}
+	.modal{background:rgba(83, 83, 83, 0.5);}
+	.ccAndBccText{
+		width:100%;
+		text-align: right;
+		display: block;
+		margin-top: 4px;
+	}
+	.composePopup .modal-title{
+		font-size: 18px;
+	}
+	.composePopup .modal-header{
+		padding: 10px;
+		background: #f5f4f4;
+	}
+	.composePopup .from-group{
+		margin-bottom:8px;
+		position: relative;
+	}
+	.sentBtn{background:#58bba1;color:#ffffff;padding: 8px 16px;outline:none;border:none;cursor: pointer;border-radius: 6px;margin-right:10px;margin-top:5px;}
+	.closeBtn{background:#484949;color:#ffffff;padding: 8px 16px;outline:none;border:none;cursor: pointer;border-radius: 6px;margin-top:5px;}
+	.rdw-editor-main {
+		min-height: 150px !important;
+		overflow: auto;
+		box-sizing: border-box;
+		padding: 0px 10px;
+		border: 1px solid #ddd;
+		max-height: 200px !important;
+	}
+	.css-1pahdxg-control{
+		border-color:#58bba1 !important;
+		box-shadow: 2px 2px 7px 0px #d6d6d6 !important;
+		-webkit-box-shadow: 2px 2px 7px 0px #d6d6d6 !important;
+		-moz-box-shadow: 2px 2px 7px 0px #d6d6d6 !important;
+		transition: .2s all ease-in-out;
+	}
+	.css-1pahdxg-control:focus{
+		border-color:#58bba1 !important;
+		box-shadow: 2px 2px 7px 0px #d6d6d6 !important;
+		-webkit-box-shadow: 2px 2px 7px 0px #d6d6d6 !important;
+		-moz-box-shadow: 2px 2px 7px 0px #d6d6d6 !important;
+		transition: .2s all ease-in-out;
+	}
+	.fileUploaded{
+		background:#58bba1;color:#ffffff;padding: 8px 16px;outline:none;border:none;cursor: pointer;border-radius: 6px;margin-right:10px;margin-top:5px;
+	}
+
+@media screen and (min-width:320px) and (max-width:767px){
+	.questionLists{width:100%;}
+	.sectionInner{
+		position: relative;
+	}
+	.loginInfo{width:400px;position: relative;
+		z-index: 2;    background: #ffffffc2;}
+	.loginBack{width:100%;height:70%;position: absolute;left: 0;bottom:0;}
+	footer{position: relative;}
+	.answerInfo span:nth-child(1){width:15%;}
+	.answerInfo span:nth-child(2){width:85%;}
+	.questionSection{height:100vh;}
+}
+@media screen and (min-width:320px) and (max-width:479px){
+	.loginInfo{width:90%;position: relative;
+		z-index: 2;    background: #ffffffc2;}
+		.loginBack{height:70%;}
+		.questionText h2,.ques{    font-size: 14px;line-height:20px;}
+		.questionText ul,.questionSection{padding:0px;}
+		.answers label{padding:5px 5px 5px 40px;}
+		.answers label:after{left:5px;}
+		.questionText ul li{padding:2px;}
+		.answers label span,.ques span{line-height:20px;}
+		.answers label span:nth-child(1){width:auto;margin-right: 5px;}
+		.nextQuestion .commonBtn{font-size: 12px;}
+		.ques span:nth-child(1){min-width:25px;font-size:13px;margin-right: 10px;}
+		.answerInfo,.answerInfo span{display: block;}
+}
+
+
+@media screen and (min-width:767px) and (max-width:991px){
+	.questionLists{width:80%;}
+}
